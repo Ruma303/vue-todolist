@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+
 .container {
     margin: 0 auto;
     gap: 3rem; 
@@ -11,7 +15,7 @@
 input {
     border-radius: 10px;
     padding: .2rem;
-    width: 20rem;
+    width: 15rem;
 }
 
 button {
@@ -24,4 +28,6 @@ li {
     border-radius: 10px;
     padding: .2rem;
     width: 20rem;
+    background-color: beige;
+    border: 1px solid lightgrey
 }

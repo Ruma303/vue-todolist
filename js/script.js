@@ -1,10 +1,12 @@
 const app = new Vue ({
    el: '#app',
     data: {
-        todos: {
-            text: '',
-            done: false,
-        }, newTodo: '',
+        todos: [
+            'compiti',
+            'spesa',
+            'bucato',
+        ], done: false,
+        newTodo: '',
     }, methods: {
         addTodo() {
             if(this.newTodo.trim())
