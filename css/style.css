@@ -4,4 +4,24 @@
 }
 
 .container {
-    margin: 0 auto;}
+    margin: 0 auto;
+    gap: 3rem; 
+}
+
+input {
+    border-radius: 10px;
+    padding: .2rem;
+    width: 20rem;
+}
+
+button {
+    background-color: yellow;
+    border-radius: 10px;
+    padding: .2rem;
+}
+
+li {
+    border-radius: 10px;
+    padding: .2rem;
+    width: 20rem;
+}

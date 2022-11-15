@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modello base</title>
+    <title>Todo list</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!-- Bootstrap -->
@@ -18,8 +18,23 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div id="app" class="container d-flex justify-content-center align-items-center m-auto flex-column">
-      
+    <div id="app" class="container d-flex justify-content-center align-items-center m-auto flex-column text-center">
+        
+        <div class="new-todo mt-5">
+            <h1>Todo List</h1>
+            <input @keyup.enter="addTodo" v-model="newTodo" type="text" placeholder=" Nuova Attività">
+            <button @click="addTodo">Aggiungi</button>
+        </div>
+    
+        <div class="todo-container">
+            <h2 v-if="todo.length === 0">Non ci sono attività da fare!</h2>
+            <ul v-else>
+                <li v-for="(todo,i) in todos" :key="todo" class="todo">
+                    {{todo}}
+                    <i class="fas fa-times" @click="deleteTodo(i)"></i>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html> 
