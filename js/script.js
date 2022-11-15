@@ -1,11 +1,16 @@
 const app = new Vue ({
    el: '#app',
     data: {
-        todos: [
-            'compiti',
-            'spesa',
-            'bucato',
-        ], done: false,
+        todos: [ {
+            task: 'compiti', 
+            status: false,
+        }, {
+            task: 'bucato', 
+            status: false,
+        },{
+            task: 'cucinare', 
+            status: false,
+        },], 
         newTodo: '',
     }, methods: {
         addTodo() {

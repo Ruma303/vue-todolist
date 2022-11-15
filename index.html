@@ -31,7 +31,7 @@
             <ul v-else class="d-flex flex-column p-0">
                 <li v-for="(todos,i) in todos" :key="todos" class="todos my-1 d-flex justify-content-between
                  align-items-center px-2">
-                    {{todos}}
+                    {{todos.task}}
                     <i class="fas fa-times" @click="deleteTodo(i)"></i>
                 </li>
             </ul>
