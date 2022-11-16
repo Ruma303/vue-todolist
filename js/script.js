@@ -12,27 +12,21 @@ const app = new Vue ({
             status: false,
         },], 
         newTask: '', //proprietà per pushare nuove task nell'array todos
-        newStatus: false,
     },  methods: {
         addTodo() {//funzione per aggiungere nuove task
             //solo se c'è scritto qualcosa aggiungi 
             if (this.newTask.length === 0) return;
-            this.todos.push({ 
+                this.todos.push({ 
                 task: this.newTask, //il task lo pusha, top
-                status: this.newStatus, //push status
+                status: false, //push status
             });
             //azzerare il campo input
-            this.newTask = '',
-
-            //oppure cambiare stato fuori dal push
-            console.log(this.newTask.status) //mi da undefined 
-            console.log(this.todos) //controllo l'intera array di oggetti e pare che ci sia
+            this.newTask = '';
 
         }, deleteTodo(i) { //metodo per cancellare i task
             this.todos.splice(i,1);
-        },
-        isDone (i) {
-            this.newStatus = !this.newStatus;
+        }, isDone (i) { //cambiare status da false a true
+            this.todos[i].status = !this.todos[i].status;
         },
     },
 });
