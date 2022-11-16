@@ -37,8 +37,6 @@ i {
     cursor:pointer;
 }
 
-
-/* CLASSE PER LE ATTIVITà CLICCATE E SBARRATE */
 .done {
     text-decoration: line-through;
     font-style: italic;
